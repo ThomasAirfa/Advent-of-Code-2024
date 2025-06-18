@@ -15,6 +15,7 @@ record DistancePair(int left, int right) {
 }
 
 DistancePair parseDistancePair(String line) {
+  Objects.requireNonNull(line, "Line is null.");
   var tokens = SPACES.split(line);
   var leftValue = Integer.parseInt(tokens[0]);
   var rightValue = Integer.parseInt(tokens[1]);
